@@ -90,7 +90,7 @@ def pay_month(start_date, end_date, month_pay):
 if __name__ == '__main__':
     today = datetime.now()
     print '当前日期： {0}'.format(today.strftime(DATE_FORMAT))
-    month_pay = get_input("每月工资(2800)：", r'^\d+$', 2800)
+    month_pay = int(get_input("每月工资(2800)：", r'^\d+$', 2800))
     print '>> 每月工资: {0}'.format(month_pay)
     default_start_date = date(today.year, today.month, 1).strftime(DATE_FORMAT)
     start_date = get_input('开始日期({0})：'.format(default_start_date), r'^\d{4}-\d{1,2}-\d{1,2}$', default_start_date)
